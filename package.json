@@ -1,0 +1,17 @@
+{
+  "name": "ui-components",
+  "version": "0.0.1",
+  "description": "A UI component library and gallery.",
+  "main": "index.js",
+  "scripts": {
+    "build": "./bin/build.js",
+    "test": "echo \"No tests yet...\""
+  },
+  "author": "Will Hastings",
+  "license": "CC-BY-4.0",
+  "devDependencies": {
+    "handlebars": "^4.0.5",
+    "metalsmith": "^2.1.0",
+    "metalsmith-layouts": "^1.6.5"
+  }
+}
