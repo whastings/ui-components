@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./bin/build.js",
+    "dev": "./bin/build.js -w",
     "test": "echo \"No tests yet...\""
   },
   "author": "Will Hastings",
@@ -17,9 +18,11 @@
     "handlebars": "^4.0.5",
     "metalsmith": "^2.1.0",
     "metalsmith-layouts": "^1.6.5",
+    "metalsmith-watch": "^1.0.3",
     "node-sass": "^3.8.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }
