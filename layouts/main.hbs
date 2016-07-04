@@ -8,11 +8,39 @@
   </head>
   <body>
     <header class="site-header">
-      <h1>UI Components</h1>
+      <div class="wrapper">
+        <h1>
+          <a href="/">UI Components</a>
+        </h1>
+        <nav class="site-nav">
+          <ul>
+            <li>
+              <a href="https://github.com/whastings/ui-components" target="_blank">Source</a>
+            </li>
+            <li>
+              <a href="http://objectdotcreate.net" target="_blank">Author</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="site-content">
-      {{{contents}}}
+      <div class="wrapper">
+        {{{contents}}}
+      </div>
+
     </main>
+
+    <footer class="site-footer">
+      &copy; Will Hastings &bull;
+      License:
+      <a
+        href="https://creativecommons.org/licenses/by/4.0/legalcode"
+        target="_blank"
+      >
+        CC-BY-4.0
+      </a>
+    </footer>
     <script src="/main.js"></script>
     <script src="/webpack-dev-server.js"></script>
   </body>
