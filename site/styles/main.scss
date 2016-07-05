@@ -1,6 +1,7 @@
 @import "~normalize.css/normalize.css";
 
-$chrome-bg: #007dba;
+$main-blue: #007dba;
+$chrome-bg: $main-blue;
 $page-gutter: 25px;
 
 %main-content-wrapper {
@@ -71,6 +72,7 @@ body {
 
   flex: 1;
   padding: 0 $page-gutter;
+  width: 100%;
 }
 
 .site-footer {
@@ -82,5 +84,52 @@ body {
   &,
   a {
     color: #fff;
+  }
+}
+
+.components-index {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.component-thumb {
+  box-sizing: border-box;
+  flex: 0 1 calc(33.3% - 16.66px);
+  margin-bottom: 25px;
+  margin-right: 25px;
+
+  &:nth-child(3n+3) {
+    margin-right: 0;
+  }
+
+  a {
+    color: $main-blue;
+    display: block;
+    text-decoration: none;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin: 10px 0 0;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.component-thumb--more {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  p {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
   }
 }
