@@ -1,0 +1,28 @@
+.zoom-container {
+  position: relative;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.zoom-box {
+  border: 2px lightblue solid;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 0;
+
+  &.active {
+    display: block;
+  }
+}
+
+.zoom-window {
+  overflow: hidden;
+  position: relative;
+
+  img {
+    position: absolute
+  }
+}

@@ -1,3 +1,6 @@
-import '../styles/main.scss';
+import 'site/styles/main.scss';
+import registerImageZoomer from 'lib/image-zoomer';
 
-console.log('Loaded!');
+[
+  registerImageZoomer
+].forEach((fn) => fn());

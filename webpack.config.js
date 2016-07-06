@@ -7,6 +7,9 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'main.js'
   },
+  resolve: {
+    root: __dirname
+  },
   module: {
     loaders: [
       {
