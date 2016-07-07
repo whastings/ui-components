@@ -1,29 +1,37 @@
-.zoom-container {
-  position: relative;
+image-zoomer {
+  .zoom-container {
+    position: relative;
 
-  img {
-    max-width: 100%;
+    img {
+      max-width: 100%;
+    }
   }
-}
 
-.zoom-box {
-  backface-visibility: hidden; // Hack to activate GPU accelaration.
-  border: 2px lightblue solid;
-  display: none;
-  left: 0;
-  position: absolute;
-  top: 0;
+  .zoom-box {
+    backface-visibility: hidden; // Hack to activate GPU acceleration.
+    border: 2px lightblue solid;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
 
-  &.active {
-    display: block;
+    &.active {
+      opacity: 1;
+    }
   }
-}
 
-.zoom-window {
-  overflow: hidden;
-  position: relative;
+  .zoom-window {
+    border: 1px #31708f solid;
+    overflow: hidden;
+    position: relative;
 
-  img {
-    position: absolute
+    img {
+      position: absolute;
+      opacity: 0;
+    }
+
+    &.active img {
+      opacity: 1;
+    }
   }
 }
