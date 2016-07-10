@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./bin/build.js",
-    "dev": "./bin/build.js -w",
+    "start": "./bin/build.js -w",
     "test": "echo \"No tests yet...\""
   },
   "author": "Will Hastings",
