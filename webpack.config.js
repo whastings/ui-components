@@ -1,7 +1,12 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
-module.exports = {
+const { UglifyJsPlugin } = webpack.optimize;
+
+const IS_PROD = (process.env.NODE_ENV === 'production');
+
+exports = module.exports = {
   entry: './site/scripts/main.js',
   output: {
     path: path.join(__dirname, 'dist'),
@@ -30,3 +35,8 @@ module.exports = {
     new ExtractTextPlugin('main.css', {allChunks: true})
   ]
 };
+
+if (IS_PROD) {
+  let { plugins } = exports;
+  plugins.push(new UglifyJsPlugin());
+}

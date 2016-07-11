@@ -4,13 +4,18 @@
     <title>UI Components</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/main.css">
+    {{#if IS_PROD}}
+      <base href="/ui-components/">
+    {{else}}
+      <base href="/">
+    {{/if}}
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <header class="site-header">
       <div class="wrapper">
         <h1>
-          <a href="/">UI Components</a>
+          <a href="">UI Components</a>
         </h1>
         <nav class="site-nav">
           <ul>
@@ -27,7 +32,6 @@
     <main class="site-content">
       {{{contents}}}
     </main>
-
     <footer class="site-footer">
       &copy; Will Hastings &bull;
       License:
@@ -38,7 +42,10 @@
         CC-BY-4.0
       </a>
     </footer>
-    <script src="/main.js"></script>
-    <script src="/webpack-dev-server.js"></script>
+
+    <script src="main.js"></script>
+    {{#unless IS_PROD}}
+      <script src="/webpack-dev-server.js"></script>
+    {{/unless}}
   </body>
 </html>
