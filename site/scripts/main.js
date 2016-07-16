@@ -1,5 +1,6 @@
 import 'site/styles/main.scss';
 import registerImageZoomer from 'lib/image-zoomer';
+import registerTooltipManager from 'lib/tooltip-manager';
 
 if ('registerElement' in document) {
   registerCustomElements();
@@ -12,6 +13,7 @@ if ('registerElement' in document) {
 
 function registerCustomElements() {
   [
-    registerImageZoomer
+    registerImageZoomer,
+    registerTooltipManager
   ].forEach((fn) => fn());
 }
