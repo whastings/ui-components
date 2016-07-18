@@ -1,0 +1,27 @@
+@mixin triangle($size, $color, $direction: up) {
+  $point-side-map: (
+    up: top,
+    down: bottom,
+    left: left,
+    right: right
+  );
+  $point-side: map-get($point-side-map, $direction);
+  $slope-size: $size / 2;
+  $slope-side-border: $slope-size transparent solid;
+
+  border-color: $color;
+  border-style: solid;
+  border-width: $size;
+  height: 0;
+  width: 0;
+
+  border-#{$point-side}: 0 transparent solid;
+
+  @if $direction == up or $direction == down {
+    border-left: $slope-side-border;
+    border-right: $slope-side-border;
+  } @else {
+    border-top: $slope-side-border;
+    border-bottom: $slope-side-border;
+  }
+}

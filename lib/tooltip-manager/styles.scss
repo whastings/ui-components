@@ -1,8 +1,14 @@
+@import '../utils.scss';
+
 .tooltip {
   $animation-duration: .3s;
+  $arrow-size: 16px;
+  $arrow-offset: $arrow-size / 2;
+  $arrow-offset-style: calc(50% - #{$arrow-offset});
+  $bg-color: #000;
   $opacity-transition: opacity $animation-duration ease-out;
 
-  background: #000;
+  background: $bg-color;
   backface-visibility: hidden; // Hack to create GPU layer.
   border-radius: 4px;
   color: #fff;
@@ -20,14 +26,31 @@
   }
 
   &:after {
-    border-color: #000 transparent transparent;
-    border-style: solid;
-    border-width: 16px 8px 0;
     content: "";
-    height: 0;
-    left: calc(50% - 8px);
     position: absolute;
+  }
+
+  &.top:after {
+    @include triangle($arrow-size, $bg-color, down);
+    left: $arrow-offset-style;
     top: 100%;
-    width: 0;
+  }
+
+  &.bottom:after {
+    @include triangle($arrow-size, $bg-color, up);
+    bottom: 100%;
+    left: $arrow-offset-style;
+  }
+
+  &.left:after {
+    @include triangle($arrow-size, $bg-color, right);
+    left: 100%;
+    top: $arrow-offset-style;
+  }
+
+  &.right:after {
+    @include triangle($arrow-size, $bg-color, left);
+    right: 100%;
+    top: $arrow-offset-style;
   }
 }
