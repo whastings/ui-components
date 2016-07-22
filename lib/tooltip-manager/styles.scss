@@ -18,6 +18,7 @@
   position: absolute;
   transition: $opacity-transition, visibility 0s $animation-duration;
   visibility: hidden;
+  z-index: 999;
 
   &.visible {
     opacity: 1;
