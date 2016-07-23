@@ -108,6 +108,7 @@ a {
 .component-thumb {
   border: 1px $main-blue solid;
   box-sizing: border-box;
+  display: flex;
   flex: 0 1 calc(33.3% - 16.66px);
   margin-bottom: 25px;
   margin-right: 25px;
@@ -118,7 +119,9 @@ a {
 
   a {
     color: $main-blue;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-decoration: none;
   }
 
