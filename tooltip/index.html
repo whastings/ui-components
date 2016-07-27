@@ -26,28 +26,32 @@
       </div>
     </header>
     <main class="site-content">
-      <div class="components-index">
-  <article class="component-thumb">
-    <a href="image-zoomer">
-      <img
-        src="images/image-zoomer.jpg"
-        alt="Image Zoomer screenshot"
-      >
-      <h2>Image Zoomer</h2>
-    </a>
-  </article>
-  <article class="component-thumb">
-    <a href="tooltip">
-      <img
-        src="images/tooltip.jpg"
-        alt="Tooltip screenshot"
-      >
-      <h2>Tooltip</h2>
-    </a>
-  </article>
-  <article class="component-thumb component-thumb--more">
-    <p>More coming soon!</p>
-  </article>
+      
+<div class="tooltip-page">
+  <h1 class="page-title">Tooltip</h1>
+
+  <tooltip-manager>
+    <div class="cell">
+      <a href="#" data-tooltip="I am a tooltip" data-tooltip-position="top">
+        Top tooltip
+      </a>
+    </div>
+    <div class="cell">
+      <a href="#" data-tooltip="I am a tooltip" data-tooltip-position="bottom">
+        Bottom tooltip
+      </a>
+    </div>
+    <div class="cell">
+      <a href="#" data-tooltip="I am a tooltip" data-tooltip-position="left">
+        Left tooltip
+      </a>
+    </div>
+    <div class="cell">
+      <a href="#" data-tooltip="I am a tooltip" data-tooltip-position="right">
+        Right tooltip
+      </a>
+    </div>
+  </tooltip-manager>
 </div>
 
     </main>
